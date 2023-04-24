@@ -19,10 +19,10 @@ let currentPhase = 0; // Initialize the current moon phase index
 
 // Define a function to update the moon phase every second
 const updateMoonPhase = () => {
-  // Output the current moon phase
+  // Outputting to console the needed emoji. \r to overwrite previous emoji
   process.stdout.write(`\r${moonPhases[currentPhase]} `);
 
-  // Increment the current moon phase index and wrap around if necessary
+  // updating current phase to show the next emoji in order
   currentPhase = (currentPhase + 1) % moonPhases.length;
 };
 
